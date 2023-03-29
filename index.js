@@ -39,8 +39,12 @@ function rollDice() {
 
 function changePlayer() {
   if (active === 0) {
+    document.querySelector(`.player-1-panel`).classList.add("active");
+    document.querySelector(`.player-0-panel`).classList.remove("active");
     active = 1;
   } else {
+    document.querySelector(`.player-0-panel`).classList.add("active");
+    document.querySelector(`.player-1-panel`).classList.remove("active");
     active = 0;
   }
 }
@@ -53,4 +57,16 @@ function holdScore() {
   if (score[active] >= 50) {
     alert("WINNER");
   }
+  changePlayer();
 }
+
+//   option.querySelectorAll("li").forEach((element) => {
+//    element.addEventListener("click", () => {
+//      if (option.querySelector(".Mariami")) {
+//        const includes = option.querySelector(".Mariami");
+//        includes.classList.remove("Mariami");
+//      }
+//      element.classList.add("Mariami");
+//           console.log(option);
+//    });
+// });
