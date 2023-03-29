@@ -22,6 +22,10 @@ function resetScore() {
   player1Score.textContent = 0;
   player2Score.textContent = 0;
   dice5.style.display = "none";
+  if (active === 1) {
+    document.querySelector(`.player-0-panel`).classList.add("active");
+    document.querySelector(`.player-1-panel`).classList.remove("active");
+  }
 }
 
 function rollDice() {
